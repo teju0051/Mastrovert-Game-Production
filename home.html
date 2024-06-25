@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastrovert Game Production: Premier Indie Game Development</title>
+    <meta name="description" content="Discover cutting-edge indie games with Mastrovert Game Production. High-quality game development with a passion for innovation.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+    {
+      "@context": "#",
+      "@type": "Organization",
+      "name": "Mastrovert Game Production",
+      "url": "https://teju0051.github.io/TService/mgp.html",
+      "logo": "https://i.ibb.co/ZNRt3Hj/Whats-App-Image-2024-05-05-at-8-21-37-PM.jpg"
+    }
+</script>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            color: #ccc;
+            background-color: #121212;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: #00d8ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #007bff;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1b1b1b;
+            padding: 10px 20px;
+            border-bottom: 2px solid #444;
+        }
+
+        header .logo img {
+            width: 200px;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: #ccc;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #00d8ff;
+        }
+
+        /* Carousel Styles */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            overflow: hidden;
+            margin: 20px 0;
+            border: 2px solid #444;
+            border-radius: 8px;
+        }
+
+        .carousel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        .carousel img:first-child {
+            display: block;
+        }
+
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* Game Container Styles */
+        .game-container {
+            text-align: center;
+            margin: 20px 10px;
+        }
+
+        .game-container img {
+            width: 100%;
+            max-width: 572px;
+            height: auto;
+            border: 2px solid #444;
+            border-radius: 8px;
+        }
+
+        .play-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 24px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: calc(100% - 40px);
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .play-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* About Us Styles */
+        .about-us {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #1b1b1b;
+            border-top: 2px solid #444;
+            border-bottom: 2px solid #444;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .about-logo img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border: 2px solid #444;
+            border-radius: 8px;
+        }
+
+        .about-description {
+            max-width: 100%;
+            margin-left: 20px; /* Adjust spacing between logo and description */
+            flex: 1; /* Allow the description to take remaining space */
+            color: #ccc;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1b1b1b;
+            color: #ccc;
+            border-top: 2px solid #444;
+        }
+
+        footer a {
+            color: #00d8ff;
+        }
+
+        /* Our Games Section Styles */
+        .our-games {
+            text-align: center;
+            padding: 20px;
+            background-color: #1b1b1b;
+            border-top: 2px solid #444;
+            border-radius: 8px;
+            margin: 20px auto;
+        }
+
+        .our-games h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #00d8ff;
+        }
+
+        .game-box {
+            display: inline-block;
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            background-color: #1b1b1b;
+            border: 2px solid #444;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .game-box img {
+            width: 100%;
+            border-bottom: 2px solid #444;
+            margin-bottom: 10px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .play-button {
+            display: inline-block;
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .play-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header .logo img {
+                width: 120px;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header nav ul li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            .carousel-container {
+                padding-top: 75%; /* Adjust aspect ratio for smaller screens */
+            }
+
+            .about-us {
+                flex-direction: column;
+                align-items: center; /* Center align items in smaller screens */
+            }
+
+            .about-logo img {
+                margin-bottom: 20px; /* Add some space between logo and description */
+            }
+
+            .about-description {
+                margin-left: 0;
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header .logo img {
+                width: 100px;
+            }
+
+            .carousel-container {
+                padding-top: 100%; /* Square aspect ratio for very small screens */
+            }
+
+            .game-box {
+                width: calc(100% - 40px);
+                margin: 0 auto 20px;
+            }
+
+            .our-games h2 {
+                font-size: 20px;
+            }
+        }
+        @media (max-width: 768px) {
+            header .logo img {
+                width: 120px;
+            }
+        
+            header nav {
+                flex: 1;
+                text-align: center;
+                margin-top: 10px;
+            }
+        
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+            }
+        
+            header nav ul li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+        
+            .carousel-container {
+                padding-top: 75%; /* Adjust aspect ratio for smaller screens */
+            }
+        
+            .about-us {
+                flex-direction: column;
+                align-items: center; /* Center align items in smaller screens */
+            }
+        
+            .about-logo img {
+                margin-bottom: 20px; /* Add some space between logo and description */
+            }
+        
+            .about-description {
+                margin-left: 0;
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="https://i.ibb.co/2hJB7DV/Add-a-little-bit-of-body-text-Copy.png" alt="Company Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="https://teju0051.github.io/Mastrovert-Game-Production/home.html">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="https://teju0051.github.io/TService/mgp-career.html">Career</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Photo Carousel -->
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="https://i.ibb.co/1GKg0pM/EPHEMERAL-SHADOWS-2.png" alt="Photo 1">
+            <img src="https://i.ibb.co/bLkstgz/EPHEMERAL-SHADOWS-1.png" alt="Photo 2">
+        </div>
+        <button class="carousel-arrow" onclick="changePhoto()">&#10095;</button>
+    </div>
+
+    <!-- Our Games Section -->
+    <section class="our-games" id="games">
+        <h2>Our Games</h2>
+        <div class="game-box">
+            <img src="https://i.ibb.co/pffV4kx/Untitled-design-2.png" alt="Game Image">
+            <button class="play-button" onclick="window.location.href='#';">Coming Soon</button>
+        </div>
+    </section>
+
+    <section class="our-games">
+        <h2>Web-games Powered by T-Games</h2>
+
+        <div class="game-box">
+            <img src="https://i.ibb.co/wJFgK04/snake-game-mgp.png" alt="Game Image">
+            <button class="play-button" onclick="window.location.href='https://teju0051.github.io/TGames/snakegame.html';">Play</button>
+        </div>
+
+        <div class="game-box">
+            <img src="https://i.ibb.co/Vt5pZdG/x-o-mg.png" alt="Game Image">
+            <button class="play-button" onclick="window.location.href='https://teju0051.github.io/TGames/tictactoe.html';">Play</button>
+        </div>
+
+        <div class="game-box">
+            <img src="https://i.ibb.co/WKRr65Y/scramble-rumble-mgp.png" alt="Game Image">
+            <button class="play-button" onclick="window.location.href='https://teju0051.github.io/TGames/scrambled-word.html';">Play</button>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us" id="about-us">
+        <div class="about-logo">
+            <img src="https://i.ibb.co/ZNRt3Hj/Whats-App-Image-2024-05-05-at-8-21-37-PM.jpg" alt="Company Logo">
+        </div>
+        <div class="about-description">
+            <h2>About Us</h2>
+            <p>We are a leading Game Developer and Publisher, creating immersive experiences for players around the world. Our innovative games combine with Web-Based Games Powered by T-Games.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p> 2024 &copy; MGP all rights reserved || Designed and Developed by <a href="https://teju0051.github.io/Zen-Tech/home.html">Zen-Tech</a></p>
+    </footer>
+
+    <script>
+        // JavaScript for Carousel
+        let currentPhotoIndex = 0;
+        const photos = document.querySelectorAll('.carousel img');
+
+        function changePhoto() {
+            photos[currentPhotoIndex].style.display = 'none';
+            currentPhotoIndex = (currentPhotoIndex + 1) % photos.length;
+            photos[currentPhotoIndex].style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
